@@ -39,7 +39,7 @@ module ShopifyApp
     protected
 
     def authenticate
-      byebug
+      puts "YO! #{main_app.root_path}"
       if shop_name = sanitize_shop_param(params)
         fullpage_redirect_to "#{main_app.root_path}auth/shopify?shop=#{shop_name}"
       else
